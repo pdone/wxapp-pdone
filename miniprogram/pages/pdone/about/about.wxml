@@ -1,0 +1,18 @@
+<!--miniprogram/pages/pdone/about/about.wxml-->
+<view class="container">
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-nickname">
+      {{userInfo.nickName}}
+    </button>
+  </view>
+  <button id='feedback' open-type='feedback' style='display:none'>意见反馈</button>
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__links">
+      <view bindtap='showAbout' class="weui-footer__link">一个小程序</view>
+      <!-- <view class="weui-footer__link"><label for='feedback'>意见反馈</label></view> -->
+    </view>
+    <view class="weui-footer__text">Copyright © 2019 Pdoner.cn</view>
+  </view>
+</view>

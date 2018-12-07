@@ -1,0 +1,15 @@
+{
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "生活信息查询",
+    "navigationBarTextStyle": "black"
+  },
+  "plugins": {
+    "marmot": {
+      "version": "1.1.0",
+      "provider": "wx8b974282f75dcd3e"
+    }
+  }
+}

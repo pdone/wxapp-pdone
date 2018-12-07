@@ -1,0 +1,26 @@
+/* marmot.wxss */
+.content-container {
+  height:100%;
+  background: #ffffff;
+}
+
+.kb-loadingbg-wrap {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding-top: 400rpx;
+  text-align: center;
+}
+
+.loading-image {
+  width: 36rpx;
+  height: 36rpx;
+  display: block;
+  padding: 28rpx 0;
+  margin:0 auto;
+}
+
+.kb-logo-image{
+  width: 487rpx;
+  height: 74rpx;
+}

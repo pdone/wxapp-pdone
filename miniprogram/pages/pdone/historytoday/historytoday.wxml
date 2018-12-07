@@ -1,0 +1,9 @@
+<!--pages/addFunction/addFunction.wxml-->
+<view class="container">
+  <view class='item' wx:for="{{array}}" wx:key="_id">
+    <view class='meta'>
+      <text class='sub-title'> {{item.date}}</text>
+      <text class='title'> {{item.title}}</text>
+    </view>
+  </view>
+</view>

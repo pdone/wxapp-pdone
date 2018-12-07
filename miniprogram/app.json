@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/pdone/historytoday/historytoday",
+    "pages/pdone/game1/game1",
+    "pages/pdone/about/about"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "一个小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "plugins": {
+    "marmot": {
+      "version": "1.1.1",
+      "provider": "wx8b974282f75dcd3e"
+    }
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/index1.png",
+        "iconPath": "images/index0.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/about1.png",
+        "iconPath": "images/about0.png",
+        "pagePath": "pages/pdone/about/about",
+        "text": "关于"
+      }
+    ]
+  }
+}
