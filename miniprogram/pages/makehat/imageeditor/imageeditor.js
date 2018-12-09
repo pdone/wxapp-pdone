@@ -121,5 +121,5 @@ Page({
     wx.navigateTo({
       url: '../combine/combine',
     })
-  }
+  },
 })

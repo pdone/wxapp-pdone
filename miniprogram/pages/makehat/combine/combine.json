@@ -1,1 +1,7 @@
-{}
+{
+  "backgroundColor": "#FFF",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTitleText": "保存到手机相册",
+  "navigationBarTextStyle": "black"
+}

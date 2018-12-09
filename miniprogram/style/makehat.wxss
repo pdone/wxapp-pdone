@@ -8,10 +8,14 @@
   height:300px;
   width:300px;
   margin: auto;
+  /* margin-top: 50px */
 }
 .emptyBg{
   margin: auto;
   height:298px;
   width:298px;
   border: 1px solid;
+}
+.hide{
+  display: none;
 }

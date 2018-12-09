@@ -5,7 +5,7 @@ Page({
 
   },
 
-  onLoad: function (options) {
+  onLoad: function(options) {
     wx.getImageInfo({
       src: app.globalData.bgPic,
       success: res => {
@@ -18,7 +18,7 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
@@ -34,17 +34,20 @@ Page({
     const hat_size = 100 * scale;
 
 
-    pc.clearRect(0, 0, windowWidth, 300);
-    pc.drawImage(this.bgPic, windowWidth / 2 - 150, 0, 300, 300);
+    pc.clearRect(0, 0, windowWidth, 300 + 100);
+    // pc.drawImage(this.bgPic, windowWidth / 2 - 150, 50, 300, 300);
+    pc.drawImage(this.bgPic, 0, 0, 300, 300);
+
     pc.translate(hat_center_x, hat_center_y);
     pc.rotate(rotate * Math.PI / 180);
-    pc.drawImage("../../../images/hat_" + currentHatId + ".png", -hat_size / 2, -hat_size / 2, hat_size, hat_size);
+    pc.drawImage("../../../images/hat_" + currentHatId + ".png", -hat_size/2 , -hat_size/2 , hat_size, hat_size);
     pc.draw();
   },
   savePic() {
     const windowWidth = wx.getSystemInfoSync().windowWidth;
     wx.canvasToTempFilePath({
-      x: windowWidth / 2 - 150,
+      // x: windowWidth / 2 - 150,
+      x: 0,
       y: 0,
       height: 300,
       width: 300,
@@ -60,7 +63,8 @@ Page({
             //   complete: function (res) { },
             // })
             // console.log("success:" + res);
-          }, fail(e) {
+          },
+          fail(e) {
             console.log("err:" + e);
           }
         })

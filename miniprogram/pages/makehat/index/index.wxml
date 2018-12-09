@@ -3,10 +3,7 @@
   <view class='updept'>
     <image mode='scaleToFill' class="bgPic" wx:if="{{bgPic}}" src="{{bgPic}}"></image>
     <view class="emptyBg" wx:else>
-    <text>第一步：选择通过什么方式制作</text>
-    <text>第二步：选择自己喜欢的圣诞帽</text>
-    <text>第三步：调整圣诞帽大小、位置</text>
-    <text>第四步：保存图片然后修改头像</text>
+    <image src='../../../images/makehat_tip.png' style='width:300px;height:100%'></image>
     </view>
   </view>
   <view class="page__bd page__bd_spacing">
