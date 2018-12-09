@@ -1,0 +1,2 @@
+/* miniprogram/pages/makehat/main/index.wxss */
+@import "../../../style/makehat.wxss"

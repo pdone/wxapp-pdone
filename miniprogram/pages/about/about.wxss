@@ -1,5 +1,4 @@
 /* miniprogram/pages/pdone/about/about.wxss */
-@import "../../../style/weui.wxss";
 page {
   background: #f6f6f6;
   display: flex;
@@ -22,9 +21,9 @@ page {
 }
 
 .userinfo-avatar {
-  width: 112rpx;
+  width: 125rpx;
   height: 100rpx;
-  margin: 20rpx;
+  margin: 25rpx;
   border-radius: 50%;
   background-size: cover;
   background-color: white;

@@ -2,7 +2,7 @@
 <view class="container">
   <!-- 用户 openid -->
   <view class="userinfo">
-    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
+    <image class="userinfo-avatar" src="{{avatarUrl}}"></image>
     <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-nickname">
       {{userInfo.nickName}}
     </button>

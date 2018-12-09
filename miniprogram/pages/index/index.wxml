@@ -47,17 +47,20 @@
 
   <!--历史上的今天-->
   <view class="navBtn">
-    <navigator class="navText" url="../pdone/historytoday/historytoday" open-type="navigate">
+    <navigator class="navText" url="../historytoday/historytoday" open-type="navigate">
       <text>历史上的今天</text>
     </navigator>
   </view>
 
   <view class="navBtn">
-    <navigator url="../pdone/game1/game1" open-type="navigate" class="navText">
+    <navigator url="../game1/game1" open-type="navigate" class="navText">
       <text>一个小游戏</text>
     </navigator>
   </view>
+
+  <view class="navBtn">
+    <navigator url="../makehat/index/index" open-type="navigate" class="navText">
+      <text space="nbsp">制作圣诞帽 <text style='font-size: small;font-style:italic;color:red'>New</text></text>
+    </navigator>
+  </view>
 </view>
-
-
- 

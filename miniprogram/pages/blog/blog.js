@@ -1,10 +1,11 @@
-// pages/pdone/historytoday/historytoday.js
+// miniprogram/pages/pdone/blog/blog.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    array: []
+   
   },
 
   /**
@@ -18,21 +19,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    wx.startPullDownRefresh()
-    var result = []
-    wx.cloud.callFunction({
-      name: 'getHistoryToday',
-      data: {},
-      success: res => {
-        result = res.result.data
-        this.setData({
-          array: result
-        })
-        setTimeout(function() {
-          wx.stopPullDownRefresh()
-        }, 500)
-      }
-    })
+   
   },
 
   /**
@@ -60,20 +47,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-    var result = []
-    wx.cloud.callFunction({
-      name: 'getHistoryToday',
-      data: {},
-      success: res => {
-        result = res.result.data
-        this.setData({
-          array: result
-        })
-        setTimeout(function () {
-          wx.stopPullDownRefresh()
-        }, 500)
-      }
-    })
+
   },
 
   /**
@@ -89,5 +63,4 @@ Page({
   onShareAppMessage: function() {
 
   }
-
 })
