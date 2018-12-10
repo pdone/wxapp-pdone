@@ -27,8 +27,8 @@
 }
 .scrollView{
    width: 100%; 
-   position: absolute;
-   bottom: 5px;
+   position: relative;
+   top: 5px;
    white-space: nowrap;
 }
 .imgList{

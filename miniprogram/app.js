@@ -17,5 +17,5 @@ App({
     hat_center_x: 0,
     hat_center_y: 0,
     currentHatId: 1
-  }
+  },
 })

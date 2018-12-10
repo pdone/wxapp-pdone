@@ -22,6 +22,9 @@ Page({
 
   },
 
+  onUnload: function() {
+
+  },
 
   draw() {
     let scale = app.globalData.scale;
@@ -38,11 +41,12 @@ Page({
     // pc.drawImage(this.bgPic, windowWidth / 2 - 150, 50, 300, 300);
     pc.drawImage(this.bgPic, 0, 0, 300, 300);
 
-    pc.translate(hat_center_x, hat_center_y);
+    pc.translate(hat_center_x - (windowWidth / 2 - 150), hat_center_y - 50);
     pc.rotate(rotate * Math.PI / 180);
-    pc.drawImage("../../../images/hat_" + currentHatId + ".png", -hat_size/2 , -hat_size/2 , hat_size, hat_size);
+    pc.drawImage("../../../images/hat_" + currentHatId + ".png", -hat_size / 2, -hat_size / 2, hat_size, hat_size);
     pc.draw();
   },
+
   savePic() {
     const windowWidth = wx.getSystemInfoSync().windowWidth;
     wx.canvasToTempFilePath({
@@ -56,13 +60,9 @@ Page({
         wx.saveImageToPhotosAlbum({
           filePath: res.tempFilePath,
           success: (res) => {
-            // wx.navigateTo({
-            //   url: '../index/index',
-            //   success: function (res) { },
-            //   fail: function (res) { },
-            //   complete: function (res) { },
-            // })
-            // console.log("success:" + res);
+            wx.navigateBack({
+              delta: 2,
+            })
           },
           fail(e) {
             console.log("err:" + e);

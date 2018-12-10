@@ -1,5 +1,6 @@
 // miniprogram/pages/pdone/about/about.js
 const app = getApp()
+var util = require('../../utils/util.js')
 Page({
 
   /**
@@ -39,7 +40,7 @@ Page({
   showAbout: function() {
     wx.showModal({
       showCancel: false,
-      content: 'ver20181207',
+      content: 'ver20181210',//util.getDateFormat('veryyyyMMdd'),
       title: '昵称不再换啦'
     })
   },

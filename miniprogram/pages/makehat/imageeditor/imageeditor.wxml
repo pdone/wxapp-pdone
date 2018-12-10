@@ -1,5 +1,5 @@
 <!--miniprogram/pages/makehat/imageeditor/imageeditor.wxml-->
-<view class='page' wx:if="{{!combine}}">
+<view class='page'>
   <view class="updept" id="container" bind:touchstart="touchStart" bind:touchend="touchEnd" bind:touchmove="touchMove">
     <image mode='scaleToFill' class="bgPic" src="{{bgPic}}"></image>
     <icon type="cancel" class="cancel" id="cancel" style="top:{{cancelCenterY-10+'px'}};left:{{cancelCenterX-10+'px'}}"></icon>
@@ -7,9 +7,9 @@
     <image class="hat" id='hat' src="../../../images/hat_{{currentHatId}}.png" style="top:{{hatCenterY-hatSize/2-2+'px'}};left:{{hatCenterX-hatSize/2-2+'px'}};transform:rotate({{rotate+'deg'}}) scale({{scale}})"></image>
   </view>
   <view class="page__bd page__bd_spacing">
-    <button bind:tap="combinePic" class="weui-btn" type="primary">确定</button>
     <scroll-view class="scrollView" scroll-x="true">
       <image class="imgList" wx:for="...imgList" wx:key="{{index+1}}" src="../../../images/hat_{{index+1}}.png" data-hat-id="{{index+1}}" bind:tap="chooseImg"></image>
     </scroll-view>
+    <button bind:tap="combinePic" class="weui-btn" type="primary">确定</button>
   </view>
 </view>

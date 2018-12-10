@@ -53,12 +53,6 @@
   </view>
 
   <view class="navBtn">
-    <navigator url="../game1/game1" open-type="navigate" class="navText">
-      <text>一个小游戏</text>
-    </navigator>
-  </view>
-
-  <view class="navBtn">
     <navigator url="../makehat/index/index" open-type="navigate" class="navText">
       <text space="nbsp">制作圣诞帽 <text style='font-size: small;font-style:italic;color:red'>New</text></text>
     </navigator>

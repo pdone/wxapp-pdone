@@ -8,11 +8,11 @@ Page({
     currentHatId: 1,
 
     hatCenterX: wx.getSystemInfoSync().windowWidth / 2,
-    hatCenterY: 150,
+    hatCenterY: 100,
     cancelCenterX: wx.getSystemInfoSync().windowWidth / 2 - 50 - 2,
-    cancelCenterY: 100,
+    cancelCenterY: 50,
     handleCenterX: wx.getSystemInfoSync().windowWidth / 2 + 50 - 2,
-    handleCenterY: 200,
+    handleCenterY: 150,
 
     hatSize: 100,
 
@@ -61,7 +61,7 @@ Page({
     this.cancel_center_y = this.data.cancelCenterY;
     this.handle_center_x = this.data.handleCenterX;
     this.handle_center_y = this.data.handleCenterY;
-    // }
+
     this.touch_target = "";
     this.scale = this.data.scale;
     this.rotate = this.data.rotate;
