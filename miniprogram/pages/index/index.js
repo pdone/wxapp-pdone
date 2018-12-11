@@ -3,13 +3,6 @@ const app = getApp()
 
 Page({
   data: {
-    avatarUrl: '../../images/default_userimg.png',
-    userInfo: {
-      nickName: '点击这里登录'
-    },
-    logged: false,
-    takeSession: false,
-    requestResult: ''
   },
 
   onLoad: function() {

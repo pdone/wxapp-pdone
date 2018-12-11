@@ -45,3 +45,12 @@ page {
 .userinfo-nickname::after {
   border: none;
 }
+
+.downDept{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.resetHeight{
+  height: 30px;
+}

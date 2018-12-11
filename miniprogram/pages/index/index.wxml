@@ -54,7 +54,13 @@
 
   <view class="navBtn">
     <navigator url="../makehat/index/index" open-type="navigate" class="navText">
-      <text space="nbsp">制作圣诞帽 <text style='font-size: small;font-style:italic;color:red'>New</text></text>
+      <text>制作圣诞帽<text space="nbsp" style='font-size: small;font-style:italic;color:red'> New</text></text>
+    </navigator>
+  </view>
+
+  <view class="navBtn hide">
+    <navigator class="navText" url="../todos/todos" open-type="navigate">
+      <text>待办事项<text space="nbsp" style='font-size: small;font-style:italic;color:red'> New</text></text>
     </navigator>
   </view>
 </view>

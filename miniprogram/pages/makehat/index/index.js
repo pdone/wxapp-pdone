@@ -54,14 +54,40 @@ Page({
     })
   },
   onGetUserInfo: function(e) {
-    if (e.detail.userInfo) {
-      app.globalData.userInfo = e.detail.userInfo;
-      var imgUrl = '' + e.detail.userInfo.avatarUrl
+    if (wx.getStorageSync("localAvatarUrl")) {
       this.setData({
         userInfo: e.detail.userInfo,
-        bgPic: imgUrl.substring(0, imgUrl.length - 3) + '0'
+        bgPic: wx.getStorageSync("localAvatarUrl")
       });
-      this.assignPicChoosed();
+      console.log('use cache')
+      this.assignPicChoosed()
+    } else {//由于有同学反馈最后生成结果的时候会失败。所以决定把头像缓存到本地，合成的时候用本地头像图片去合成。
+      if (e.detail.userInfo) {
+        var imgUrl = '' + e.detail.userInfo.avatarUrl
+        var bigImgUrl = imgUrl.substring(0, imgUrl.length - 3) + '0'
+        wx.downloadFile({
+          url: bigImgUrl,
+          fail: err => {
+            console.log(err)
+          },
+          success: function(res) {
+            wx.saveFile({
+              tempFilePath: res.tempFilePath,
+              success: res => {
+                wx.setStorageSync("localAvatarUrl", res.savedFilePath)
+              }
+            })
+          }
+        })
+        wx.setStorageSync('userInfo', e.detail.userInfo)
+        app.globalData.userInfo = e.detail.userInfo
+        app.globalData.bgPic = wx.getStorageSync("localAvatarUrl") //bigImgUrl
+        this.setData({
+          userInfo: e.detail.userInfo,
+          bgPic: bigImgUrl
+        });
+        this.assignPicChoosed()
+      }
     }
   },
 

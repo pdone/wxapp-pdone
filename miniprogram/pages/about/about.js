@@ -8,9 +8,7 @@ Page({
    */
   data: {
     avatarUrl: '../../images/default_userimg.png',
-    userInfo: {
-      nickName: '点击这里登录'
-    },
+    nickName: '点击这里登录',
     logged: false
   },
 
@@ -28,7 +26,8 @@ Page({
 
   onGetUserInfo: function(e) {
     if (!this.logged && e.detail.userInfo) {
-      app.globalData.userInfo = e.detail.userInfo
+      // app.globalData.userInfo = e.detail.userInfo
+      wx.setStorageSync('userInfo', e.detail.userInfo)
       this.setData({
         logged: true,
         avatarUrl: e.detail.userInfo.avatarUrl,
@@ -40,7 +39,7 @@ Page({
   showAbout: function() {
     wx.showModal({
       showCancel: false,
-      content: 'ver20181210',//util.getDateFormat('veryyyyMMdd'),
+      content: 'ver20181210', //util.getDateFormat('veryyyyMMdd'),
       title: '昵称不再换啦'
     })
   },
@@ -48,14 +47,33 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    if (app.globalData.userInfo) {
+    var userinfo = wx.getStorageSync('userInfo')
+    if (userinfo) {
       this.setData({
-        avatarUrl: app.globalData.userInfo.avatarUrl,
-        userInfo: app.globalData.userInfo,
-      });
+        avatarUrl: userinfo.avatarUrl,
+        nickName: userinfo.nickName
+      })
     }
   },
+  showSetting: function() {
+    wx.openSetting({
 
+    })
+  },
+  showSysinfo: function() {
+    wx.getSystemInfo({
+      success: function(res) {
+        wx.showActionSheet({
+          itemList: ['手机品牌:' + res.brand, '手机型号:' + res.model, '微信版本号:' + res.version, '操作系统版本:' + res.system, '客户端平台:' + res.platform, '基础库版本:' + res.SDKVersion],
+          success: function(res) {
+            if (!res.cancel) {
+              console.log(res.tapIndex)
+            }
+          }
+        })
+      },
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

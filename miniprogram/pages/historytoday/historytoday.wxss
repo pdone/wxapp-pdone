@@ -20,7 +20,7 @@
   padding: 20rpx 40rpx;
   border-bottom: 1rpx solid #eee;
   cursor: pointer;
-  width: 100%;
+  width: 92%;
 }
 .item .poster {
   width: 128rpx;

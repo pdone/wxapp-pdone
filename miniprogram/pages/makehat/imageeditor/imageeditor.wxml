@@ -10,6 +10,6 @@
     <scroll-view class="scrollView" scroll-x="true">
       <image class="imgList" wx:for="...imgList" wx:key="{{index+1}}" src="../../../images/hat_{{index+1}}.png" data-hat-id="{{index+1}}" bind:tap="chooseImg"></image>
     </scroll-view>
-    <button bind:tap="combinePic" class="weui-btn" type="primary">确定</button>
+    <button bind:tap="combinePic" class="weui-btn" type="primary">下一步</button>
   </view>
 </view>

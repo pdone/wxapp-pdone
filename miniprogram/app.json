@@ -12,7 +12,8 @@
     "pages/blog/blog",
     "pages/makehat/index/index",
     "pages/makehat/combine/combine",
-    "pages/makehat/imageeditor/imageeditor"
+    "pages/makehat/imageeditor/imageeditor",
+    "pages/todos/todos"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
