@@ -1,2 +1,4 @@
 <!--miniprogram/pages/pdone/blog/blog.wxml-->
-<text>miniprogram/pages/pdone/blog/blog.wxml</text>
+<import src="../../utils/wxParse/wxParse.wxml"/>
+
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>

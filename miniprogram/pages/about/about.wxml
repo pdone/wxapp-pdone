@@ -25,6 +25,12 @@
         <view class="weui-cell__bd">给开发者加鸡腿</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </view>
+
+      <navigator url='../blog/blog' class="weui-cell resetHeight" hover-class="weui-cell_active">
+        <image src="../../images/blog1.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        <view class="weui-cell__bd">博客</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
     </view>
   </view>
   <button id='btnfeedback' open-type='feedback' style='display:none'>意见反馈</button>

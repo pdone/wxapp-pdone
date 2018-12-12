@@ -1,1 +1,2 @@
 /* miniprogram/pages/pdone/blog/blog.wxss */
+@import "../../utils/wxParse/wxParse.wxss";

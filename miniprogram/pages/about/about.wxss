@@ -48,9 +48,9 @@ page {
 
 .downDept{
   width: 100%;
-  margin-top: 20px;
+  margin-top: 40rpx;
 }
 
 .resetHeight{
-  height: 30px;
+  height: 60rpx;
 }
