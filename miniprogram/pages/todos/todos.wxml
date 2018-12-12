@@ -11,7 +11,7 @@
         <!-- completed: success, todo: circle -->
         <icon class="checkbox" type="{{ item.completed ? 'success' : 'circle' }}"/>
         <text class="name">{{ item.name }}</text>
-        <icon class="remove" type="clear" size="16" catchtap="removeTodoHandle" data-index="{{ index }}"/>
+        <icon class="remove" type="clear" size="20" catchtap="removeTodoHandle" data-index="{{ index }}"/>
       </view>
     </view>
     <view class="footer">

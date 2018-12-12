@@ -35,7 +35,11 @@ Page({
       })
     }
   },
+  showSetting: function () {
+    wx.openSetting({
 
+    })
+  },
   showAbout: function() {
     wx.showModal({
       showCancel: false,
@@ -55,23 +59,25 @@ Page({
       })
     }
   },
-  showSetting: function() {
-    wx.openSetting({
-
-    })
-  },
-  showSysinfo: function() {
-    wx.getSystemInfo({
-      success: function(res) {
-        wx.showActionSheet({
-          itemList: ['手机品牌:' + res.brand, '手机型号:' + res.model, '微信版本号:' + res.version, '操作系统版本:' + res.system, '客户端平台:' + res.platform, '基础库版本:' + res.SDKVersion],
-          success: function(res) {
-            if (!res.cancel) {
-              console.log(res.tapIndex)
-            }
-          }
-        })
+  giveLike: function() {
+    wx.navigateToMiniProgram({
+      appId: 'wx18a2ac992306a5a4',
+      path: 'pages/apps/largess/detail?accountId=6575852',
+      extraData: {
+        //需要传递给目标小程序的数据，目标小程序可在 App.onLaunch，App.onShow 中获取到这份数据。
       },
+      envVersion: 'release',
+      success(res) {
+        // 打开成功
+      },
+      fail:{
+      
+      },
+      complete:res=>{
+        wx.showToast({
+          title: '非常感谢',
+        })
+      }
     })
   },
   /**

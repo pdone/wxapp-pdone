@@ -1,0 +1,35 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">系统信息</view>
+    <view class="page__desc">System Information</view>
+  </view>
+  <view class="page__bd">
+    <!-- <view class="weui-cells__title">带说明的列表项</view> -->
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">手机品牌</view>
+        <view class="weui-cell__ft">{{sysinfo.brand}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">手机型号</view>
+        <view class="weui-cell__ft">{{sysinfo.model}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">操作系统版本</view>
+        <view class="weui-cell__ft">{{sysinfo.system}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">微信版本</view>
+        <view class="weui-cell__ft">{{sysinfo.version}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">基础库版本</view>
+        <view class="weui-cell__ft">{{sysinfo.SDKVersion}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">设备像素比</view>
+        <view class="weui-cell__ft">{{sysinfo.pixelRatio}}</view>
+      </view>
+    </view>
+  </view>
+</view>

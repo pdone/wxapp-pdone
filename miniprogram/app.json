@@ -13,7 +13,8 @@
     "pages/makehat/index/index",
     "pages/makehat/combine/combine",
     "pages/makehat/imageeditor/imageeditor",
-    "pages/todos/todos"
+    "pages/todos/todos",
+    "pages/sysinfo/sysinfo"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -46,5 +47,8 @@
         "text": "我的"
       }
     ]
-  }
+  },
+    "navigateToMiniProgramAppIdList": [
+      "wx18a2ac992306a5a4"
+    ]
 }
