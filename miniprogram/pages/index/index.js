@@ -3,6 +3,7 @@ const app = getApp()
 
 Page({
   data: {
+    visible: false,
   },
 
   onLoad: function() {
@@ -100,6 +101,7 @@ Page({
       }
     })
   },
+
   /**
    * 用户点击右上角分享
    */

@@ -1,0 +1,92 @@
+// miniprogram/pages/qrcode/qrcode.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    value: '',
+    fgColor: 'black',
+  },
+  bindinput(e) {
+    const value = e.detail.value
+    //const fgColor = this.randomColor()
+
+    this.setData({
+      value,
+      //fgColor,
+    })
+  },
+  previewImage() {
+    var that = this
+    wx.canvasToTempFilePath({
+      canvasId: 'wux-qrcode',
+      success: res => {
+        wx.previewImage({
+          urls: [res.tempFilePath],
+        })
+      }
+    })
+  },
+  randomColor() {
+    const colorStr = Math.floor(Math.random() * 0xFFFFFF).toString(16).toUpperCase()
+    const length = colorStr.length
+    const prefixStr = `000000`.substring(0, 6 - colorStr.length)
+    return `#${prefixStr}${colorStr}`
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function(options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function() {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function() {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function() {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function() {
+
+  }
+})

@@ -16,6 +16,4 @@
   width:298px;
   border: 1px solid;
 }
-.hide{
-  display: none;
-}
+

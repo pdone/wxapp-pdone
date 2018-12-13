@@ -1,0 +1,4 @@
+/* miniprogram/pages/qrcode/qrcode.wxss */
+.qrcode {
+    margin: 30px auto;
+} 

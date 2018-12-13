@@ -11,7 +11,7 @@
     padding: 40px;
 }
 .page__bd {
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 .page__bd_spacing {
     padding-left: 15px;
@@ -34,5 +34,9 @@
     color: #888888;
     text-align: left;
     font-size: 14px;
+}
+
+.hide{
+  display: none;
 }
 

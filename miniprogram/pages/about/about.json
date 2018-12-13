@@ -1,3 +1,10 @@
 {
-  "navigationBarTitleText": "我的"
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "wux-notification": "../../dist/notification/index",
+    "wux-alert": "../../dist/alert/index",
+    "wux-popover": "../../dist/popover/index",
+    "wux-button": "../../dist/button/index",
+    "wux-toptips": "../../dist/toptips/index"
+  }
 }

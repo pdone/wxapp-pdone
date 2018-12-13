@@ -1,4 +1,8 @@
 // miniprogram/pages/pdone/about/about.js
+import {
+  $wuxNotification,
+  $wuxToptips
+} from '../../dist/index'
 const app = getApp()
 var util = require('../../utils/util.js')
 Page({
@@ -9,7 +13,8 @@ Page({
   data: {
     avatarUrl: '../../images/default_userimg.png',
     nickName: '点击这里登录',
-    logged: false
+    logged: false,
+    visible: true
   },
 
   /**
@@ -35,9 +40,8 @@ Page({
       })
     }
   },
-  showSetting: function () {
+  showSetting: function() {
     wx.openSetting({
-
     })
   },
   showAbout: function() {
@@ -45,6 +49,14 @@ Page({
       showCancel: false,
       content: 'ver20181210', //util.getDateFormat('veryyyyMMdd'),
       title: '昵称不再换啦'
+    })
+  },
+  showToptips1() {
+    $wuxToptips().info({
+      hidden: false,
+      text: '当前版本更新于2018年12月13日',
+      duration: 2300,
+      success() { },
     })
   },
   /**
@@ -67,13 +79,11 @@ Page({
         //需要传递给目标小程序的数据，目标小程序可在 App.onLaunch，App.onShow 中获取到这份数据。
       },
       envVersion: 'release',
-      success(res) {
-        // 打开成功
+      success(res) {},
+      fail: {
+
       },
-      fail:{
-      
-      },
-      complete:res=>{
+      complete: res => {
         wx.showToast({
           title: '非常感谢',
         })
