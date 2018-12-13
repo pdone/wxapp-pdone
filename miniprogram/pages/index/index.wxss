@@ -21,7 +21,29 @@ page {
   transition: all 300ms ease;
   box-sizing: border-box;
 }
-
+.navBtn2 {
+  margin-top: 40rpx;
+  height: 84px;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+  box-sizing: border-box;
+}
+.navBtn3 {
+  margin:40rpx 20rpx 5rpx;
+  height: 100rpx;
+  border-radius: 30px;
+  width: 95%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+  box-sizing: border-box;
+}
 .navText {
   padding: 0 0 0 40rpx;
   width: 100%;

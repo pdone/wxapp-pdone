@@ -6,11 +6,11 @@
   <view class="page__bd">
     <wux-qrcode wux-class="qrcode" data="{{ value }}" fg-color="{{ fgColor }}" width="200" height="200" bind:tap="previewImage" />
 
-    <view class="weui-cells__title">请输入内容，即时输入即时生成</view>
-    <view class="weui-cells weui-cells_after-title">
+    <!-- <view class="weui-cells__title">请输入内容，即时输入即时生成</view> -->
+    <view class="weui-cells2 weui-cells_after-title textareaborder">
       <view class="weui-cell">
         <view class="weui-cell__bd">
-          <textarea value="{{ value }}" bindinput="bindinput" class="weui-textarea" placeholder="支持文本、网址和电子邮箱" style="height: 4.2em" maxlength="300" />
+          <textarea value="{{ value }}" bindinput="bindinput" class="weui-textarea" placeholder="在此输入内容，实时生成二维码" style="height: 4.2em" maxlength="300" />
           <view class="weui-textarea-counter">{{ value.length }}/300</view>
         </view>
       </view>

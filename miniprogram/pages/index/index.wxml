@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
+  <!-- <official-account class="navBtn2" height="84px"></official-account> -->
   <!--土拨鼠天气首页-->
   <view class="navBtn">
     <navigator class="navText" url="plugin://marmot/index">天气查询</navigator>
@@ -20,13 +21,14 @@
   <view class="navBtn">
     <navigator url="../makehat/index/index" open-type="navigate" class="navText">
       <text>制作圣诞帽</text>
+      <wux-tag color="red" style='margin-left:8px;'>圣诞节</wux-tag>
     </navigator>
   </view>
 
-  <view class="navBtn hide">
+  <view class="navBtn">
     <navigator class="navText" url="../qrcode/qrcode" open-type="navigate">
       <text>生成二维码</text>
-      <wux-tag color="red" style='margin-left:8px;'>新功能</wux-tag>
+      <wux-tag color="cyan" style='margin-left:8px;'>新功能</wux-tag>
     </navigator>
   </view>
 </view>

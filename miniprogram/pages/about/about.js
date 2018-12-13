@@ -14,7 +14,8 @@ Page({
     avatarUrl: '../../images/default_userimg.png',
     nickName: '点击这里登录',
     logged: false,
-    visible: true
+    visible: true,
+    developer: false
   },
 
   /**
@@ -30,8 +31,18 @@ Page({
   },
 
   onGetUserInfo: function(e) {
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: res => {
+        if (res.result.openid == 'oiQr940QcYmDq_Y_fD-cMvOoywhw') {
+          this.setData({
+            developer: true
+          })
+        }
+      },
+    })
     if (!this.logged && e.detail.userInfo) {
-      // app.globalData.userInfo = e.detail.userInfo
       wx.setStorageSync('userInfo', e.detail.userInfo)
       this.setData({
         logged: true,
@@ -41,8 +52,7 @@ Page({
     }
   },
   showSetting: function() {
-    wx.openSetting({
-    })
+    wx.openSetting({})
   },
   showAbout: function() {
     wx.showModal({
@@ -56,7 +66,7 @@ Page({
       hidden: false,
       text: '当前版本更新于2018年12月13日',
       duration: 2300,
-      success() { },
+      success() {},
     })
   },
   /**

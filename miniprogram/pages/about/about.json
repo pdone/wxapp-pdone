@@ -1,5 +1,4 @@
 {
-  "navigationBarTitleText": "我的",
   "usingComponents": {
     "wux-notification": "../../dist/notification/index",
     "wux-alert": "../../dist/alert/index",

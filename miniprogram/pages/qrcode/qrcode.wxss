@@ -1,4 +1,20 @@
 /* miniprogram/pages/qrcode/qrcode.wxss */
+
 .qrcode {
-    margin: 30px auto;
-} 
+  margin: 30px auto;
+}
+
+.textareaborder {
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: #c5c5c5;
+  margin: 0 8px 0;
+}
+
+.weui-cells2 {
+  position: relative;
+  margin-top: 1.17647059em;
+  background-color: #fff;
+  line-height: 1.41176471;
+  font-size: 17px;
+}
