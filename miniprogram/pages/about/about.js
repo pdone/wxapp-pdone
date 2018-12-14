@@ -31,6 +31,9 @@ Page({
   },
 
   onGetUserInfo: function(e) {
+    wx.showLoading({
+      title: '加载中',
+    })
     wx.cloud.callFunction({
       name: 'login',
       data: {},
@@ -41,13 +44,16 @@ Page({
           })
         }
       },
+      complete: function() {
+        wx.hideLoading()
+      }
     })
     if (!this.logged && e.detail.userInfo) {
       wx.setStorageSync('userInfo', e.detail.userInfo)
       this.setData({
         logged: true,
         avatarUrl: e.detail.userInfo.avatarUrl,
-        userInfo: e.detail.userInfo
+        nickName: e.detail.userInfo.nickName
       })
     }
   },
@@ -139,6 +145,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-
+    return {
+      title: '昵称不再换啦',
+      desc: '一个诞生于个人兴趣的小程序'
+    }
   },
 })

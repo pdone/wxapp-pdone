@@ -41,7 +41,7 @@
   <view class="weui-footer weui-footer_fixed-bottom">
     <view class="weui-footer__links">
       <view class="weui-footer__link">
-          <view bindtap='showToptips1'>昵称不再换啦</view>
+        <view bindtap='showToptips1'>昵称不再换啦</view>
       </view>
     </view>
     <view class="weui-footer__text">Copyright © 2019 Pdoner.cn</view>
