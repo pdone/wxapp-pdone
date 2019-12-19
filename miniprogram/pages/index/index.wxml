@@ -13,7 +13,7 @@
 
   <view class="navBtn">
     <navigator url="../makehat/index/index" open-type="navigate" class="navText">
-      <text>制作圣诞帽</text>
+      <text>头像添加圣诞帽</text>
       <wux-tag color="red" class='setTag'>圣诞节</wux-tag>
     </navigator>
   </view>
