@@ -61,3 +61,6 @@ page {
   background:none; 
   border:1px #FFF solid;
 }
+.setTag {
+  font-size: 35rpx;
+}

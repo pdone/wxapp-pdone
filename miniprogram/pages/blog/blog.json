@@ -1,1 +1,12 @@
-{}
+{
+  "backgroundColor": "#FFF",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTitleText": "开发者博客",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "wux-card": "../../dist/card/index",
+    "wux-wing-blank": "../../dist/wing-blank/index",
+    "wux-alert": "../../dist/alert/index"
+  }
+}

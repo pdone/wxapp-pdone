@@ -3,7 +3,7 @@
   <view class='updept'>
     <image mode='scaleToFill' class="bgPic" wx:if="{{bgPic}}" src="{{bgPic}}"></image>
     <view class="emptyBg" wx:else>
-    <image src='../../../images/makehat_tip.png' style='width:300px;height:100%'></image>
+    <image src='../../../images/makehat_tip2.png' style='width:300px;height:100%'></image>
     </view>
   </view>
   <view class="page__bd page__bd_spacing">

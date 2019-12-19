@@ -40,3 +40,6 @@
   display: none;
 }
 
+.setTag{
+  margin-left:8px;
+}

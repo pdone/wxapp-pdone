@@ -15,7 +15,7 @@ Page({
     nickName: '点击这里登录',
     logged: false,
     visible: true,
-    developer: false
+    developer: true
   },
 
   /**
@@ -28,26 +28,37 @@ Page({
       })
       return
     }
+    var userinfo = wx.getStorageSync('userInfo')
+    if (userinfo) {
+      this.setData({
+        avatarUrl: userinfo.avatarUrl,
+        nickName: userinfo.nickName
+      })
+    }
+    console.log(wx.getStorageSync('userInfo'))
   },
 
   onGetUserInfo: function(e) {
-    wx.showLoading({
-      title: '加载中',
-    })
-    wx.cloud.callFunction({
-      name: 'login',
-      data: {},
-      success: res => {
-        if (res.result.openid == 'oiQr940QcYmDq_Y_fD-cMvOoywhw') {
-          this.setData({
-            developer: true
-          })
+    if (!this.developer && !this.logged) {
+      wx.showLoading({
+        title: '加载中',
+      })
+      wx.cloud.callFunction({
+        name: 'login',
+        data: {},
+        success: res => {
+          if (res.result.openid == 'oiQr940QcYmDq_Y_fD-cMvOoywhw') {
+            this.setData({
+              developer: true,
+              logged: true
+            })
+          }
+        },
+        complete: function() {
+          wx.hideLoading()
         }
-      },
-      complete: function() {
-        wx.hideLoading()
-      }
-    })
+      })
+    }
     if (!this.logged && e.detail.userInfo) {
       wx.setStorageSync('userInfo', e.detail.userInfo)
       this.setData({
@@ -63,15 +74,15 @@ Page({
   showAbout: function() {
     wx.showModal({
       showCancel: false,
-      content: 'ver20181210', //util.getDateFormat('veryyyyMMdd'),
+      content: 'ver20191219', //util.getDateFormat('veryyyyMMdd'),
       title: '昵称不再换啦'
     })
   },
   showToptips1() {
     $wuxToptips().info({
       hidden: false,
-      text: '当前版本更新于2018年12月13日',
-      duration: 2300,
+      text: '当前版本更新于2019年12月19日',
+      duration: 2000,
       success() {},
     })
   },
@@ -79,13 +90,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    var userinfo = wx.getStorageSync('userInfo')
-    if (userinfo) {
-      this.setData({
-        avatarUrl: userinfo.avatarUrl,
-        nickName: userinfo.nickName
-      })
-    }
+    
   },
   giveLike: function() {
     wx.navigateToMiniProgram({

@@ -1,2 +1,7 @@
 /* miniprogram/pages/pdone/blog/blog.wxss */
 @import "../../utils/wxParse/wxParse.wxss";
+
+.setCard{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}

@@ -1,6 +1,7 @@
 module.exports = {
   formatTime: formatTime,
-  getDateFormat: getDateFormat
+  getDateFormat: getDateFormat,
+  decodeUnicode: decodeUnicode
 }
 
 const formatTime = date => {
@@ -50,4 +51,36 @@ Date.prototype.format = function(fmt) {
   for (var k in o)
     if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
   return fmt;
+}
+
+
+/**
+ * 解析段落的unicode字符，聊天记录的内容中有很多是编码过的
+ */
+function decodeUnicode(str) {
+  var ret = '';
+  var splits = str.replace(/&#/g, '\\u').split(';');
+  for (let i = 0; i < splits.length; i++) {
+    ret += spliteDecode(splits[i]);
+  }
+  return ret;
+}
+
+
+/**
+ * 解析单个unidecode字符
+ */
+function spliteDecode(value) {
+  var target = value.match(/\\u\d+/g);
+  if (target && target.length > 0) {
+    target = target[0];
+    var temp = value.replace(target, '{{@}}');
+    target = target.replace('\\u', '');
+    target = String.fromCharCode(parseInt(target));
+    return temp.replace("{{@}}", target);
+  } else {
+    // value = value.replace( '\\u', '' );
+    // return String.fromCharCode( parseInt( value, '10' ) )
+    return value;
+  }
 }

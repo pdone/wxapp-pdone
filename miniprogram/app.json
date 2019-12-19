@@ -9,7 +9,8 @@
     "pages/makehat/combine/combine",
     "pages/makehat/imageeditor/imageeditor",
     "pages/sysinfo/sysinfo",
-    "pages/qrcode/qrcode"
+    "pages/qrcode/qrcode",
+    "pages/todos/todos"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -19,10 +20,7 @@
     "navigationBarTextStyle": "black"
   },
   "plugins": {
-    "marmot": {
-      "version": "1.1.2",
-      "provider": "wx8b974282f75dcd3e"
-    }
+
   },
   "tabBar": {
     "color": "#707070",
@@ -45,5 +43,6 @@
   },
   "navigateToMiniProgramAppIdList": [
     "wx18a2ac992306a5a4"
-  ]
+  ],
+  "sitemapLocation": "sitemap.json"
 }

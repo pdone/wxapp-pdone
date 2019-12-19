@@ -1,4 +1,13 @@
 <!--miniprogram/pages/pdone/blog/blog.wxml-->
-<import src="../../utils/wxParse/wxParse.wxml"/>
+<!-- <import src="../../utils/wxParse/wxParse.wxml"/>
 
-<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/> -->
+<wux-alert theme="positive" closable title="长按复制文章链接"/>
+<view wx:for="{{pageData}}" wx:for-index="id" wx:key="{{id}}" class='setCard'bindlongpress='getlink' bindtouchstart="touchStart" bindtouchend="touchEnd" data-link='{{item.link}}'>
+  <wux-wing-blank size="default">
+    <wux-card title="{{item.title}}" thumb-style="border-radius: 80%;">
+      <view slot="body">{{item.link}}</view>
+      <view slot="footer">{{item.date}}</view>
+    </wux-card>
+  </wux-wing-blank>
+</view>

@@ -13,6 +13,58 @@ Page({
       })
       return
     }
+
+    // wx.login({
+    //   success(res) {
+    //     if (res.code) {
+    //       // 发起网络请求
+    //       wx.request({
+    //         url: 'http://localhost:53487/code2Session?code=' + res.code,
+    //         success: res2 => {
+    //           console.log(res2.data)
+    //           if (res2.data.data!=null) {
+    //             wx.showModal({
+    //               title: res2.data.data.openid,
+    //               content: res2.data.data.session_key,
+    //             })
+    //           }
+    //         }
+    //       })
+    //     } else {
+    //       console.log('登录失败！' + res.errMsg)
+    //     }
+    //   }
+    // })
+
+    //检查是否存在新版本
+    wx.getUpdateManager().onCheckForUpdate(function(res) {
+      // 请求完新版本信息的回调
+      console.log("是否有新版本：" + res.hasUpdate)
+      if (res.hasUpdate) { //如果有新版本
+
+        // 小程序有新版本，会主动触发下载操作（无需开发者触发）
+        wx.getUpdateManager().onUpdateReady(function() { //当新版本下载完成，会进行回调
+          wx.showModal({
+            content: '检测到新版本，即将开始更新',
+            showCancel: false,
+            success: function(res) {
+              if (res.confirm) {
+                // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+                wx.getUpdateManager().applyUpdate()
+              }
+            }
+          })
+        })
+
+        // 小程序有新版本，会主动触发下载操作（无需开发者触发）
+        wx.getUpdateManager().onUpdateFailed(function() { //当新版本下载失败，会进行回调
+          wx.showModal({
+            content: '检查到有新版本，但下载失败，请检查网络设置',
+            showCancel: false,
+          })
+        })
+      }
+    })
   },
 
   onGetOpenid: function() {
@@ -106,6 +158,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-
+    return {
+      title: '昵称不再换啦',
+      desc: '一个诞生于个人兴趣的小程序'
+    }
   },
 })

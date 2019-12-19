@@ -21,6 +21,7 @@
         <view class="weui-cell__bd">系统信息</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
+
       <view class="weui-cell resetHeight" hover-class="weui-cell_active" bindtap='giveLike'>
         <image src="../../images/like.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
         <view class="weui-cell__bd">给开发者加鸡腿</view>
@@ -28,8 +29,17 @@
       </view>
 
       <navigator wx:if='{{developer}}' url='../blog/blog' class="weui-cell resetHeight" hover-class="weui-cell_active">
-        <image src="../../images/blog1.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-        <view class="weui-cell__bd">博客</view>
+        <image src="../../images/blog5.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        <view class="weui-cell__bd">皮蛋的博客
+          <wux-tag color="geekblue" class='setTag'>开发中</wux-tag>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+
+      <navigator wx:if='{{developer}}' url='../todos/todos' class="weui-cell resetHeight" hover-class="weui-cell_active">
+        <image src="../../images/todo.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        <view class="weui-cell__bd">待办事项
+        </view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
     </view>
