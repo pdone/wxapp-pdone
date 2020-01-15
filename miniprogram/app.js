@@ -1,3 +1,4 @@
+var plugin = requirePlugin("myPlugin");
 //app.js
 App({
   onLaunch: function() {
@@ -26,6 +27,7 @@ App({
     rotate: 0,
     hat_center_x: 0,
     hat_center_y: 0,
-    currentHatId: 1
+    currentHatId: 1,
+    systemInfo : wx.getSystemInfoSync()
   },
 })

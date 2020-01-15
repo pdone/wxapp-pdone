@@ -5,8 +5,11 @@
   flex-direction: column;
   align-items: left;
   box-sizing: border-box;
-}  */
-
+   margin-top: 100rpx; 
+} */
+.page_top_white{
+  margin-top: 110rpx; 
+}
 .page__hd {
     padding: 40px;
 }
@@ -42,4 +45,11 @@
 
 .setTag{
   margin-left:8px;
+}
+
+.nav_title
+{
+  font-size: 16px;
+  padding-left: 20px;
+  /* color: #595959;   */
 }

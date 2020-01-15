@@ -1,4 +1,5 @@
 <!--pages/addFunction/addFunction.wxml-->
+<!-- <navBar title='' back="{{true}}" home="{{false}}" bindback="handlerGobackClick"></navBar> -->
 <view class="container">
   <view class='item' wx:for="{{array}}" wx:key="_id">
     <view class='meta'>

@@ -1,4 +1,10 @@
 <!--miniprogram/pages/pdone/about/about.wxml-->
+<!-- <navBar title='' background='#f6f6f6' back="{{false}}" home="{{false}}" >
+ 	<view class='location' slot="left">
+ 		<view class='nav_title'>一个小程序</view>
+ 	</view>
+</navBar> -->
+
 <wux-toptips id="wux-toptips" />
 <view class="container">
   <!-- 用户 openid -->
@@ -54,6 +60,6 @@
         <view bindtap='showToptips1'>昵称不再换啦</view>
       </view>
     </view>
-    <view class="weui-footer__text">Copyright © 2019 Pdoner.cn</view>
+    <view class="weui-footer__text">Copyright © 2020 Pdoner.cn</view>
   </view>
 </view>

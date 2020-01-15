@@ -15,7 +15,8 @@ Page({
     nickName: '点击这里登录',
     logged: false,
     visible: true,
-    developer: true
+    developer: true,
+    statusBarHeight: app.globalData.systemInfo.statusBarHeight
   },
 
   /**
@@ -27,7 +28,7 @@ Page({
         url: '../chooseLib/chooseLib',
       })
       return
-    }
+    }    
     var userinfo = wx.getStorageSync('userInfo')
     if (userinfo) {
       this.setData({
@@ -36,6 +37,7 @@ Page({
       })
     }
     console.log(wx.getStorageSync('userInfo'))
+    console.log(this.data.statusBarHeight)
   },
 
   onGetUserInfo: function(e) {
@@ -71,17 +73,17 @@ Page({
   showSetting: function() {
     wx.openSetting({})
   },
-  showAbout: function() {
-    wx.showModal({
-      showCancel: false,
-      content: 'ver20191219', //util.getDateFormat('veryyyyMMdd'),
-      title: '昵称不再换啦'
-    })
-  },
+  // showAbout: function() {
+  //   wx.showModal({
+  //     showCancel: false,
+  //     content: 'ver20191219', //util.getDateFormat('veryyyyMMdd'),
+  //     title: '昵称不再换啦'
+  //   })
+  // },
   showToptips1() {
     $wuxToptips().info({
       hidden: false,
-      text: '当前版本更新于2019年12月19日',
+      text: `当前版本更新于2020年01月15日`,
       duration: 2000,
       success() {},
     })

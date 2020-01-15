@@ -88,6 +88,17 @@ Page({
    */
   onShareAppMessage: function() {
 
-  }
-
+  },
+  handlerGobackClick(delta) {
+    const pages = getCurrentPages();
+    if (pages.length >= 2) {
+      wx.navigateBack({
+        delta: delta
+      });
+    } else {
+      wx.navigateTo({
+        url: '/pages/index/index'
+      });
+    }
+  },
 })

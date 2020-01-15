@@ -10,7 +10,8 @@
     "pages/makehat/imageeditor/imageeditor",
     "pages/sysinfo/sysinfo",
     "pages/qrcode/qrcode",
-    "pages/todos/todos"
+    "pages/todos/todos",
+    "pages/originalPluginPage/originalPluginPage"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -19,15 +20,24 @@
     "navigationBarTitleText": "一个小程序",
     "navigationBarTextStyle": "black"
   },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "plugins": {
-
+    "myPlugin": {
+      "version": "1.1.12",
+      "provider": "wx8c631f7e9f2465e1"
+    },
+    "WechatSI": {
+      "version": "0.3.3",
+      "provider": "wx069ba97219f66d99"
+    }
   },
   "tabBar": {
     "color": "#707070",
     "selectedColor": "#1296db",
     "borderStyle": "black",
-    "list": [
-      {
+    "list": [{
         "selectedIconPath": "images/index1.png",
         "iconPath": "images/index0.png",
         "pagePath": "pages/index/index",

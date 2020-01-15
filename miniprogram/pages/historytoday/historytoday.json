@@ -2,5 +2,8 @@
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark",
   "navigationBarTitleText": "历史上的今天",
-  "disableScoll": "ture"
+  "disableScoll": "ture",
+  "usingComponents": {
+    "navBar": "../../components/navBar/navBar"
+  }
 }

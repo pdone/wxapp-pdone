@@ -2,6 +2,7 @@
   "usingComponents": {
     "wux-tag": "../../dist/tag/index",
     "wux-card": "../../dist/card/index",
-    "wux-wing-blank": "../../dist/wing-blank/index"
+    "wux-wing-blank": "../../dist/wing-blank/index",
+    "navBar": "../../components/navBar/navBar"
   }
 }

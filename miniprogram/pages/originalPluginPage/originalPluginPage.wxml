@@ -1,0 +1,19 @@
+<!-- 系统导航 -->
+<!-- <navBar title='AI语音助手'  color='#000' back="{{true}}" home="{{true}}" iconTheme='white' bindback="handlerGobackClick" bindhome="goBackHome"  extClass="lxy-navbar-extclass"></navBar> -->
+
+
+<View class='nav'>
+	<navBar title='AI语音助手' background='rgba(0,0,0,0)' color='#fff' back="{{true}}" home="{{false}}" iconTheme='white' bindback="handlerGobackClick" bindhome="goBackHome" extClass="lxy-navbar-extclass"></navBar>
+</View>
+<View class='main22'>
+	<view class="container" wx:if="{{flag}}">
+		<view class="" style="height: 100vh">
+			<chat bind:queryCallback="getQueryCallback" bind:backHome="goBackHome"></chat>
+		</view>
+	</view>
+</View>
+<!-- <view class="container" wx:if="{{flag}}">
+		<view class="" style="height: 100vh">
+			<chat bind:queryCallback="getQueryCallback" bind:backHome="goBackHome"></chat>
+		</view>
+	</view> -->

@@ -5,6 +5,7 @@
     "wux-popover": "../../dist/popover/index",
     "wux-button": "../../dist/button/index",
     "wux-toptips": "../../dist/toptips/index",
-    "wux-tag": "../../dist/tag/index"
+    "wux-tag": "../../dist/tag/index",
+    "navBar": "../../components/navBar/navBar"
   }
 }

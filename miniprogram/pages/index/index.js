@@ -1,19 +1,27 @@
 //index.js
 const app = getApp()
-
 Page({
   data: {
     visible: false,
+    statusBarHeight: app.globalData.systemInfo.statusBarHeight
   },
-
-  onLoad: function() {
+  onLoad: function () {
     if (!wx.cloud) {
       wx.redirectTo({
         url: '../chooseLib/chooseLib',
       })
       return
     }
+    // let systemInfo = wx.getSystemInfoSync();
+    // let rect = wx.getMenuButtonBoundingClientRect ? wx.getMenuButtonBoundingClientRect() : null; //胶囊按钮位置信息
+    // wx.getMenuButtonBoundingClientRect();
+    // let navBarHeight = (function () { //导航栏高度
+    //   let gap = rect.top - systemInfo.statusBarHeight; //动态计算每台手机状态栏到胶囊按钮间距
+    //   return 2 * gap + rect.height;
+    // })();
+    // console.log(navBarHeight);
 
+    //console.log(app.globalData.systemInfo.statusBarHeight + "sss");
     // wx.login({
     //   success(res) {
     //     if (res.code) {
@@ -37,17 +45,17 @@ Page({
     // })
 
     //检查是否存在新版本
-    wx.getUpdateManager().onCheckForUpdate(function(res) {
+    wx.getUpdateManager().onCheckForUpdate(function (res) {
       // 请求完新版本信息的回调
       console.log("是否有新版本：" + res.hasUpdate)
       if (res.hasUpdate) { //如果有新版本
 
         // 小程序有新版本，会主动触发下载操作（无需开发者触发）
-        wx.getUpdateManager().onUpdateReady(function() { //当新版本下载完成，会进行回调
+        wx.getUpdateManager().onUpdateReady(function () { //当新版本下载完成，会进行回调
           wx.showModal({
             content: '检测到新版本，即将开始更新',
             showCancel: false,
-            success: function(res) {
+            success: function (res) {
               if (res.confirm) {
                 // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
                 wx.getUpdateManager().applyUpdate()
@@ -57,7 +65,7 @@ Page({
         })
 
         // 小程序有新版本，会主动触发下载操作（无需开发者触发）
-        wx.getUpdateManager().onUpdateFailed(function() { //当新版本下载失败，会进行回调
+        wx.getUpdateManager().onUpdateFailed(function () { //当新版本下载失败，会进行回调
           wx.showModal({
             content: '检查到有新版本，但下载失败，请检查网络设置',
             showCancel: false,
@@ -67,7 +75,7 @@ Page({
     })
   },
 
-  onGetOpenid: function() {
+  onGetOpenid: function () {
     // 调用云函数
     wx.cloud.callFunction({
       name: 'login',
@@ -89,13 +97,13 @@ Page({
   },
 
   // 上传图片
-  doUpload: function() {
+  doUpload: function () {
     // 选择图片
     wx.chooseImage({
       count: 1,
       sizeType: ['compressed'],
       sourceType: ['album', 'camera'],
-      success: function(res) {
+      success: function (res) {
 
         wx.showLoading({
           title: '上传中',
@@ -138,7 +146,7 @@ Page({
     })
   },
 
-  mycloudfunc1: function() {
+  mycloudfunc1: function () {
     wx.cloud.callFunction({
       name: 'pdone',
       data: {
@@ -157,7 +165,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
     return {
       title: '昵称不再换啦',
       desc: '一个诞生于个人兴趣的小程序'

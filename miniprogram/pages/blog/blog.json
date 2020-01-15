@@ -7,6 +7,7 @@
   "usingComponents": {
     "wux-card": "../../dist/card/index",
     "wux-wing-blank": "../../dist/wing-blank/index",
-    "wux-alert": "../../dist/alert/index"
+    "wux-alert": "../../dist/alert/index",
+    "navBar": "../../components/navBar/navBar"
   }
 }
