@@ -1,6 +1,8 @@
 /* miniprogram/pages/qrcode/qrcode.wxss */
 
 .qrcode {
+  display: flex;
+  justify-content: center;
   margin: 30px auto;
 }
 

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "wux-card": "../../dist/card/index",
+    "wux-wing-blank": "../../dist/wing-blank/index"
+  },
+  "navigationBarBackgroundColor": "#f6f6f6",
+  "navigationBarTitleText": "节日倒计时"
+}

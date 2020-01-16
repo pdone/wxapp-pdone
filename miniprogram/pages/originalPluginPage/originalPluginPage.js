@@ -8,7 +8,7 @@ Page({
     plugin.init({
       appid: "Lo0cOlE6zcjC5JCknKnJyrCr8cEwwE",
       // textToSpeech: false,
-      guideList: ["洛阳天气怎么样", "美元汇率", "讲个笑话吧"],
+      guideList: ["明天天气", "美元汇率", "讲个笑话吧"],
       welcome: ['您好，请问有什么可以帮助您的'],
       background: "#fff",
       // guideCardHeight: 40,

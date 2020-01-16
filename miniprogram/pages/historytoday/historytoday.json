@@ -2,7 +2,7 @@
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark",
   "navigationBarTitleText": "历史上的今天",
-  "disableScoll": "ture",
+  "navigationBarBackgroundColor": "#f6f6f6",
   "usingComponents": {
     "navBar": "../../components/navBar/navBar"
   }

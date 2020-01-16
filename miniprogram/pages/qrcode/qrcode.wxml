@@ -4,7 +4,10 @@
     <view class="page__desc">QRCode</view>
   </view>
   <view class="page__bd">
-    <wux-qrcode wux-class="qrcode" data="{{ value }}" fg-color="{{ fgColor }}" width="200" height="200" bind:tap="previewImage" />
+
+<view class="qrcode">
+            <wux-qrcode id="qrcode" data="{{ value }}" fg-color="{{ fgColor }}" width="200" height="200" bind:click="previewImage" />
+        </view>
 
     <!-- <view class="weui-cells__title">请输入内容，即时输入即时生成</view> -->
     <view class="weui-cells2 weui-cells_after-title textareaborder">
@@ -15,6 +18,6 @@
         </view>
       </view>
     </view>
-    <!-- <view class="weui-cells__tips">提示：Canvas 在微信中无法长按识别, 点击图片进入保存页面长按图片可以保存</view> -->
+    <view class="weui-cells__tips">提示：点击图片全屏显示，然后长按图片可以保存</view>
   </view>
 </view>

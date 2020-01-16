@@ -1,0 +1,40 @@
+<!-- <view class="page">
+	<view class="page__hd">
+		<view class="page__title">生成条形码</view>
+		<view class="page__desc">BarCode</view>
+	</view>
+	<view class="page__bd">
+		<view class="barcode">
+			<wux-barcode number="{{ number }}" options="{{ options }}" width="200" height="100" />
+		</view>
+		<view class="weui-cells2 weui-cells_after-title textareaborder">
+			<view class="weui-cell">
+				<view class="weui-cell__bd">
+					 <textarea value="{{ number }}" bindinput="bindinput" class="weui-textarea" placeholder="输入13位数字，实时生成条形码" style="height: 4.2em" maxlength="13" />
+          <view class="weui-textarea-counter">{{ number.length }}/13</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> -->
+
+<view class="page">
+	<view class="page__hd">
+		<view class="page__title">生成条形码</view>
+		<view class="page__desc">Barcode</view>
+	</view>
+	<view class="page__bd">
+		<view class="weui-cells__title">输入13位数字，实时生成条形码</view>
+		<view class="weui-cells weui-cells_after-title">
+			<view class="weui-cell weui-cell_input">
+				<view class="weui-cell__bd">
+					<input value="{{ number }}" type="number" class="weui-input" bindinput="bindinput" maxlength="13" />
+				</view>
+			</view>
+		</view>
+		<view class="weui-cells__tips">提示：胡乱输入的条形码是识别不出来的</view>
+		<view class="barcode">
+			<wux-barcode number="{{ number }}" options="{{ options }}" width="200" height="100" />
+		</view>
+	</view>
+</view>

@@ -2,7 +2,7 @@
   "backgroundColor": "#FFF",
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#FFF",
-  "navigationBarTitleText": "开发者博客",
+  "navigationBarTitleText": "皮蛋的博客",
   "navigationBarTextStyle": "black",
   "usingComponents": {
     "wux-card": "../../dist/card/index",

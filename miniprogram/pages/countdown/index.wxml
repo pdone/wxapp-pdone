@@ -1,0 +1,12 @@
+<view class="view-wrap">
+	<view wx:for="{{targetTime}}" wx:key="utcDate">
+		<view wx:if="{{item.status == 1 ? true:false}}" style="margin: 10px 0;">
+			<wux-wing-blank size="default">
+				<wux-card title="{{item.name}}" extra="{{item.date}}">
+					<view slot="body" style="color: #1296db;font-size: 28px;text-align: center;">{{item.days}}<text>天</text></view>
+					<!-- <view slot="footer">尾部内容</view> -->
+				</wux-card>
+			</wux-wing-blank>
+		</view>
+	</view>
+</view>

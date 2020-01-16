@@ -18,15 +18,17 @@ Page({
     })
   },
   previewImage() {
-    var that = this
+    // 在自定义组件下，当前组件实例的 this，以操作组件内 <canvas> 组件
+    const that = this.selectComponent('#qrcode')
+
     wx.canvasToTempFilePath({
       canvasId: 'wux-qrcode',
-      success: res => {
+      success: (res) => {
         wx.previewImage({
           urls: [res.tempFilePath],
         })
-      }
-    })
+      },
+    }, that)
   },
   randomColor() {
     const colorStr = Math.floor(Math.random() * 0xFFFFFF).toString(16).toUpperCase()
@@ -37,56 +39,56 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

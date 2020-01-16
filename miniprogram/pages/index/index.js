@@ -171,4 +171,15 @@ Page({
       desc: '一个诞生于个人兴趣的小程序'
     }
   },
+
+  //首页跳转
+  toSubPage(e) {
+    wx.navigateTo({
+      //前台data-url参数
+      url: e.currentTarget.dataset.url,
+      success: function (res) {
+
+      }
+    })
+  },
 })

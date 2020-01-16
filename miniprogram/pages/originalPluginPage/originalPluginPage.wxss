@@ -1,6 +1,7 @@
 .lxy-nav-bar .lxy-nav-bar__inner .lxy-nav-bar__center text {
   margin-top: -2px;
 }
+
 .main22 {
   /* prettier-ignore */
   height: 400PX;
@@ -10,6 +11,7 @@
   line-height: 60rpx;
   text-align: center;
 }
+
 .nav {
   height: 0;
 }
@@ -22,4 +24,8 @@
 .lxy-navbar-extclass .lxy-nav-bar__inner .lxy-nav-bar__left .lxy-nav-bar__btn_gohome {
   background-image: url("data:image/svg+xml,%3Csvg t='1565943334961' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='3467' width='48' height='48'%3E%3Cpath d='M426.666667 597.333333h170.666666v298.666667h-170.666666z' fill='%23000000' p-id='3468'%3E%3C/path%3E%3Cpath d='M871.253333 434.346667L542.293333 98.133333a42.666667 42.666667 0 0 0-60.586666 0l-328.96 336.64A85.333333 85.333333 0 0 0 128 495.786667V853.333333a85.333333 85.333333 0 0 0 80.64 85.333334H341.333333v-384a42.666667 42.666667 0 0 1 42.666667-42.666667h256a42.666667 42.666667 0 0 1 42.666667 42.666667v384h132.693333A85.333333 85.333333 0 0 0 896 853.333333v-357.546666a88.32 88.32 0 0 0-24.746667-61.44z' fill='%23000000' p-id='3469'%3E%3C/path%3E%3C/svg%3E");
   background-size: 22px 22px;
+}
+
+.musicCard_content {
+  padding-top: 0;
 }

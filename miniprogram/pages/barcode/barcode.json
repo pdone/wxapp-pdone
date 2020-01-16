@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "wux-barcode": "../../dist/barcode/index"
+  }
+}

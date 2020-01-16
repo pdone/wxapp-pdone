@@ -16,22 +16,21 @@
     <navigator class="navText" url="plugin://marmot/chat">天气AI助手</navigator>
   </view> -->
 
- 	<view class="navBtn">
+ 	<!-- <view class="navBtn">
  		<navigator url="../makehat/index/index" open-type="navigate" class="navText">
  			<text>头像添加圣诞帽</text>
  			<wux-tag color="red" class='setTag'>圣诞节</wux-tag>
  		</navigator>
- 	</view>
+ 	</view> -->
 
- 	<view class="navBtn">
+ 	<!-- <view class="navBtn">
  		<navigator class="navText" url="../qrcode/qrcode" open-type="navigate">
  			<text>生成二维码</text>
- 			<!-- <wux-tag color="cyan" class='setTag'>新功能</wux-tag> -->
  		</navigator>
- 	</view>
+ 	</view> -->
 
  	<!--历史上的今天-->
- 	<view class="navBtn">
+ 	<!-- <view class="navBtn">
  		<navigator class="navText" url="../historytoday/historytoday" open-type="navigate">
  			<text>历史上的今天</text>
  		</navigator>
@@ -42,5 +41,32 @@
  			<text>AI语音助手</text>
  			<wux-tag color="cyan" class='setTag'>新功能</wux-tag>
  		</navigator>
- 	</view>
+ 	</view> -->
+
+ 	<wux-grids square>
+ 		<wux-grid bind:click="toSubPage" data-url="../makehat/index/index">
+ 			<wux-icon type="ios-snow" />
+ 			<view class="grid_lable">头像圣诞帽</view>
+ 		</wux-grid>
+ 		<wux-grid bind:click="toSubPage" data-url="../qrcode/qrcode">
+ 			<wux-icon type="ios-qr-scanner" />
+ 			<view class="grid_lable">生成二维码</view>
+ 		</wux-grid>
+ 		<wux-grid bind:click="toSubPage" data-url="../barcode/barcode">
+ 			<wux-icon type="ios-barcode" />
+ 			<view class="grid_lable">生成条形码</view>
+ 		</wux-grid>
+ 		<wux-grid bind:click="toSubPage" data-url="../historytoday/historytoday">
+ 			<wux-icon type="ios-link" />
+ 			<view class="grid_lable">历史上的今天</view>
+ 		</wux-grid>
+ 		<wux-grid bind:click="toSubPage" data-url="../originalPluginPage/originalPluginPage">
+ 			<wux-icon type="ios-heart-empty" color="red" />
+ 			<view class="grid_lable">AI语音助手</view>
+ 		</wux-grid>
+ 		<wux-grid bind:click="toSubPage" data-url="../countdown/index">
+ 			<wux-icon type="ios-timer" />
+ 			<view class="grid_lable">节日倒计时</view>
+ 		</wux-grid>
+ 	</wux-grids>
  </view>

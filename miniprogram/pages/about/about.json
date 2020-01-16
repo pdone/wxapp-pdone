@@ -7,5 +7,6 @@
     "wux-toptips": "../../dist/toptips/index",
     "wux-tag": "../../dist/tag/index",
     "navBar": "../../components/navBar/navBar"
-  }
+  },
+  "navigationBarBackgroundColor": "#f6f6f6"
 }

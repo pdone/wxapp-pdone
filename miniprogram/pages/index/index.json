@@ -3,6 +3,10 @@
     "wux-tag": "../../dist/tag/index",
     "wux-card": "../../dist/card/index",
     "wux-wing-blank": "../../dist/wing-blank/index",
-    "navBar": "../../components/navBar/navBar"
-  }
+    "navBar": "../../components/navBar/navBar",
+    "wux-icon": "../../dist/icon/index",
+    "wux-grids": "../../dist/grids/index",
+    "wux-grid": "../../dist/grid/index"
+  },
+  "navigationBarBackgroundColor": "#f6f6f6"
 }

@@ -37,7 +37,7 @@ Page({
       })
     }
     console.log(wx.getStorageSync('userInfo'))
-    console.log(this.data.statusBarHeight)
+    // console.log(this.data.statusBarHeight)
   },
 
   onGetUserInfo: function(e) {
@@ -83,7 +83,7 @@ Page({
   showToptips1() {
     $wuxToptips().info({
       hidden: false,
-      text: `当前版本更新于2020年01月15日`,
+      text: `当前版本更新于2020年01月16日`,
       duration: 2000,
       success() {},
     })

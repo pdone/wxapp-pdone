@@ -3,7 +3,7 @@
 
 
 <View class='nav'>
-	<navBar title='AI语音助手' background='rgba(0,0,0,0)' color='#fff' back="{{true}}" home="{{false}}" iconTheme='white' bindback="handlerGobackClick" bindhome="goBackHome" extClass="lxy-navbar-extclass"></navBar>
+	<navBar title='' background='rgba(0,0,0,0)' color='#fff' back="{{true}}" home="{{false}}" iconTheme='white' bindback="handlerGobackClick" bindhome="goBackHome" extClass="lxy-navbar-extclass"></navBar>
 </View>
 <View class='main22'>
 	<view class="container" wx:if="{{flag}}">
