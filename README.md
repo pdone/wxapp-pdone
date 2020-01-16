@@ -4,7 +4,7 @@
 
 ## 参考文档
 
-- [小程序简易教程](https://developers.weixin.qq.com/miniprogram/dev/)
+- [小程序简介](https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/#小程序简介)
 - [小程序API](https://developers.weixin.qq.com/miniprogram/dev/api/)
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
