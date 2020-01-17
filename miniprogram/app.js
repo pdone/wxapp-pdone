@@ -9,16 +9,6 @@ App({
         traceUser: true,
       })
     }
-    // wx.setClipboardData({
-    //   data: '527463983',
-    //   success(res) {
-    //     wx.getClipboardData({
-    //       success(res) {
-    //         console.log(res.data) // data
-    //       }
-    //     })
-    //   }
-    // })
   },
   globalData: {
     userInfo: null,

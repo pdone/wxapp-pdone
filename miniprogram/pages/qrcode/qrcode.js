@@ -7,14 +7,38 @@ Page({
   data: {
     value: '',
     fgColor: 'black',
+    isdisable: false
   },
+
   bindinput(e) {
     const value = e.detail.value
-    //const fgColor = this.randomColor()
-
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
     this.setData({
-      value,
-      //fgColor,
+      isdisable: true
+    })
+    //调用云函数 检查用户输入内容安全性
+    wx.cloud.callFunction({
+      name: 'msgCheck',
+      data: {
+        content: value
+      }
+    }).then(ckres => {
+      wx.hideLoading();
+      if (ckres.result.errCode == 87014) {
+        wx.showToast({
+          title: '请注意言论',
+          icon: 'none',
+          mask: true
+        })
+      } else {
+        this.setData({
+          value: value,
+          isdisable: false,
+        })
+      }
     })
   },
   previewImage() {

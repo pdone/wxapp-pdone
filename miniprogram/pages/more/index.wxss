@@ -1,0 +1,22 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty .title {
+  font-size: 60rpx;
+  margin: 200rpx 50rpx 0rpx;
+  color: #444;
+}
+.empty .title2 {
+  font-size: 60rpx;
+  margin: 0rpx 50rpx 50rpx;
+  color: #444;
+}
+
+.empty .content {
+  color: #666;
+  text-align: center;
+}

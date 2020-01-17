@@ -68,5 +68,9 @@
  			<wux-icon type="ios-timer" />
  			<view class="grid_lable">节日倒计时</view>
  		</wux-grid>
+		 <!-- <wux-grid bind:click="toSubPage" data-url="../more/index">
+ 			<wux-icon type="ios-more" />
+ 			<view class="grid_lable">更多</view>
+ 		</wux-grid> -->
  	</wux-grids>
  </view>

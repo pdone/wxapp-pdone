@@ -1,20 +1,20 @@
 <view class="page">
-  <view class="page__hd">
-    <view class="page__title">生成二维码</view>
-    <view class="page__desc">QRCode</view>
-  </view>
-  <view class="page__bd">
+	<view class="page__hd">
+		<view class="page__title">生成二维码</view>
+		<view class="page__desc">QRCode</view>
+	</view>
+	<view class="page__bd">
 
-<view class="qrcode">
-            <wux-qrcode id="qrcode" data="{{ value }}" fg-color="{{ fgColor }}" width="200" height="200" bind:click="previewImage" />
-        </view>
+		<view class="qrcode">
+			<wux-qrcode id="qrcode" data="{{ value }}" fg-color="{{ fgColor }}" width="200" height="200" bind:click="previewImage" />
+		</view>
 
-    <!-- <view class="weui-cells__title">请输入内容，即时输入即时生成</view> -->
-    <view class="weui-cells2 weui-cells_after-title textareaborder">
-      <view class="weui-cell">
-        <view class="weui-cell__bd">
-          <textarea value="{{ value }}" bindinput="bindinput" class="weui-textarea" placeholder="在此输入内容，实时生成二维码" style="height: 4.2em" maxlength="300" />
-          <view class="weui-textarea-counter">{{ value.length }}/300</view>
+		<!-- <view class="weui-cells__title">请输入内容，即时输入即时生成</view> -->
+		<view class="weui-cells2 weui-cells_after-title textareaborder">
+			<view class="weui-cell">
+				<view class="weui-cell__bd">
+					<textarea value="{{ value }}" disabled="{{isdisable}}" bindinput="bindinput" class="weui-textarea" placeholder="在此输入内容，实时生成二维码" style="height: 4.2em" maxlength="300"/>
+					<view class="weui-textarea-counter">{{ value.length }}/300</view>
         </view>
       </view>
     </view>

@@ -13,7 +13,8 @@
     "pages/todos/todos",
     "pages/originalPluginPage/originalPluginPage",
     "pages/barcode/barcode",
-    "pages/countdown/index"
+    "pages/countdown/index",
+    "pages/more/index"
   ],
   "window": {
     "backgroundColor": "#f6f6f6",

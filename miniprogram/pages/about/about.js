@@ -83,7 +83,7 @@ Page({
   showToptips1() {
     $wuxToptips().info({
       hidden: false,
-      text: `当前版本更新于2020年01月16日`,
+      text: `当前版本更新于2020年01月17日`,
       duration: 2000,
       success() {},
     })
