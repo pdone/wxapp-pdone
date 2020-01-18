@@ -79,9 +79,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    this.setData({
-      clearTimer: true
-    });
+
   },
 
   /**
@@ -104,9 +102,4 @@ Page({
   onShareAppMessage: function () {
 
   },
-  myLinsterner(e) {
-    this.setData({
-      status: '结束'
-    });
-  }
 })

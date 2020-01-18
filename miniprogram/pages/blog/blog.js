@@ -34,6 +34,7 @@ Page({
     // var article = '';
     // var that = this;
     // WxParse.wxParse('article', 'html', article, that, 0);
+
     var that = this
     wx.showLoading({
       title: '加载中',
@@ -69,54 +70,8 @@ Page({
       }
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
-  },
+ 
+  //长按复制文章链接
   getlink:function(event)
   {
     var data = event.currentTarget.dataset
@@ -126,27 +81,5 @@ Page({
 
       }
     })
-  },
-  /// 按钮触摸开始触发的事件
-  touchStart: function (e) {
-    this.touchStartTime = e.timeStamp
-  },
-
-  /// 按钮触摸结束触发的事件
-  touchEnd: function (e) {
-    this.touchEndTime = e.timeStamp
-  },
-  
-  handlerGobackClick(delta) {
-    const pages = getCurrentPages();
-    if (pages.length >= 2) {
-      wx.navigateBack({
-        delta: delta
-      });
-    } else {
-      wx.navigateTo({
-        url: '/pages/index/index'
-      });
-    }
   },
 })

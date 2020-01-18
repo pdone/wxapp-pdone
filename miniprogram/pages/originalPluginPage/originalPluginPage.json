@@ -3,8 +3,7 @@
     "chat": "plugin://myPlugin/chat",
     "navBar": "../../components/navBar/navBar"
   },
-  "navigationBarBackgroundColor": "#F6F6F6",
-  "navigationBarTitleText": "AI语音助手",
-  "navigationBarTextStyle": "white",
-  "navigationStyle": "custom"
+  "navigationBarBackgroundColor": "#1b2446",
+  "navigationBarTitleText": "",
+  "navigationBarTextStyle": "white"
 }

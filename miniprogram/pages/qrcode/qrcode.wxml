@@ -13,7 +13,7 @@
 		<view class="weui-cells2 weui-cells_after-title textareaborder">
 			<view class="weui-cell">
 				<view class="weui-cell__bd">
-					<textarea value="{{ value }}" disabled="{{isdisable}}" bindinput="bindinput" class="weui-textarea" placeholder="在此输入内容，实时生成二维码" style="height: 4.2em" maxlength="300"/>
+					<textarea value="{{ value }}" disabled="{{isdisable}}" bindblur="bindinput"  class="weui-textarea" placeholder="在此输入内容，点击完成即可生成" style="height: 4.2em" maxlength="300"/>
 					<view class="weui-textarea-counter">{{ value.length }}/300</view>
         </view>
       </view>

@@ -12,6 +12,7 @@ Page({
       })
       return
     }
+
     // let systemInfo = wx.getSystemInfoSync();
     // let rect = wx.getMenuButtonBoundingClientRect ? wx.getMenuButtonBoundingClientRect() : null; //胶囊按钮位置信息
     // wx.getMenuButtonBoundingClientRect();
@@ -76,16 +77,13 @@ Page({
   },
 
   onGetOpenid: function () {
-    // 调用云函数
+    // 调用云函数获取访问用户的OpenID
     wx.cloud.callFunction({
       name: 'login',
       data: {},
       success: res => {
         console.log('[云函数] [login] user openid: ', res.result.openid)
-        app.globalData.openid = res.result.openid
-        wx.navigateTo({
-          url: '../userConsole/userConsole',
-        })
+        app.globalData.openid = res.result.openid     
       },
       fail: err => {
         console.error('[云函数] [login] 调用失败', err)
@@ -146,6 +144,7 @@ Page({
     })
   },
 
+  //测试云函数
   mycloudfunc1: function () {
     wx.cloud.callFunction({
       name: 'pdone',
@@ -172,7 +171,7 @@ Page({
     }
   },
 
-  //首页跳转
+  //首页跳转功能页面
   toSubPage(e) {
     wx.navigateTo({
       //前台data-url参数

@@ -5,44 +5,6 @@
  </navBar> -->
  <!--index.wxml-->
  <view class="container">
- 	<!-- <official-account class="navBtn2" height="84px"></official-account> -->
- 	<!--土拨鼠天气首页-->
- 	<!-- <view class="navBtn">
-    <navigator class="navText" url="plugin://marmot/index">天气查询</navigator>
-  </view> -->
-
- 	<!--土拨鼠AI-->
- 	<!-- <view class="navBtn">
-    <navigator class="navText" url="plugin://marmot/chat">天气AI助手</navigator>
-  </view> -->
-
- 	<!-- <view class="navBtn">
- 		<navigator url="../makehat/index/index" open-type="navigate" class="navText">
- 			<text>头像添加圣诞帽</text>
- 			<wux-tag color="red" class='setTag'>圣诞节</wux-tag>
- 		</navigator>
- 	</view> -->
-
- 	<!-- <view class="navBtn">
- 		<navigator class="navText" url="../qrcode/qrcode" open-type="navigate">
- 			<text>生成二维码</text>
- 		</navigator>
- 	</view> -->
-
- 	<!--历史上的今天-->
- 	<!-- <view class="navBtn">
- 		<navigator class="navText" url="../historytoday/historytoday" open-type="navigate">
- 			<text>历史上的今天</text>
- 		</navigator>
- 	</view>
-
- 	<view class="navBtn">
- 		<navigator class="navText" url="../originalPluginPage/originalPluginPage" open-type="navigate">
- 			<text>AI语音助手</text>
- 			<wux-tag color="cyan" class='setTag'>新功能</wux-tag>
- 		</navigator>
- 	</view> -->
-
  	<wux-grids square>
  		<wux-grid bind:click="toSubPage" data-url="../makehat/index/index">
  			<wux-icon type="ios-snow" />
@@ -68,7 +30,7 @@
  			<wux-icon type="ios-timer" />
  			<view class="grid_lable">节日倒计时</view>
  		</wux-grid>
-		 <!-- <wux-grid bind:click="toSubPage" data-url="../more/index">
+ 		<!-- <wux-grid bind:click="toSubPage" data-url="../more/index">
  			<wux-icon type="ios-more" />
  			<view class="grid_lable">更多</view>
  		</wux-grid> -->

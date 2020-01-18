@@ -1,7 +1,8 @@
+//AI语音助手
 var plugin = requirePlugin("myPlugin");
 //app.js
 App({
-  onLaunch: function() {
+  onLaunch: function () {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -18,6 +19,7 @@ App({
     hat_center_x: 0,
     hat_center_y: 0,
     currentHatId: 1,
-    systemInfo : wx.getSystemInfoSync()
+    systemInfo: wx.getSystemInfoSync(),
+    openid: "",
   },
 })

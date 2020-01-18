@@ -40,6 +40,7 @@ Page({
     // console.log(this.data.statusBarHeight)
   },
 
+  //点击登录
   onGetUserInfo: function(e) {
     if (!this.developer && !this.logged) {
       wx.showLoading({
@@ -73,27 +74,17 @@ Page({
   showSetting: function() {
     wx.openSetting({})
   },
-  // showAbout: function() {
-  //   wx.showModal({
-  //     showCancel: false,
-  //     content: 'ver20191219', //util.getDateFormat('veryyyyMMdd'),
-  //     title: '昵称不再换啦'
-  //   })
-  // },
+
   showToptips1() {
     $wuxToptips().info({
       hidden: false,
-      text: `当前版本更新于2020年01月17日`,
+      text: `当前版本更新于2020年01月18日`,
       duration: 2000,
       success() {},
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-    
-  },
+
+  //跳转“给赞”小程序打赏
   giveLike: function() {
     wx.navigateToMiniProgram({
       appId: 'wx18a2ac992306a5a4',
@@ -112,41 +103,7 @@ Page({
         })
       }
     })
-  },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
+  }, 
 
   /**
    * 用户点击右上角分享

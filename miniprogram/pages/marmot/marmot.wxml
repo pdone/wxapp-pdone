@@ -1,7 +1,0 @@
-<!--marmot.wxml-->
-<view class="content-container">
-    <view class="kb-loadingbg-wrap">
-      <image class="loading-image" src="http://mat1.gtimg.com/www/images/newsapp/wxapp/news/loading3.gif"></image>
-      <image class="kb-logo-image" src="http://mat1.gtimg.com/www/images/newsapp/wxapp/news/bgLogo.png"></image> 
-    </view>
-</view>
